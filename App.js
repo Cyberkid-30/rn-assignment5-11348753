@@ -1,11 +1,27 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Settings, StyleSheet, Text, View } from "react-native";
+import HomeScreen from "./app/screens/HomeScreen";
+import Button from "./app/components/Button";
+import Buttons from "./app/components/Buttons";
+import SettingsScreen from "./app/screens/SettingsScreen";
+import colors from "./app/Config/colors";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
+  const Tab = createBottomTabNavigator();
+  const TabNavigator = () => {
+    <Tab.Navigator>
+      <Tab.Screen name="/" component={HomeScreen} />
+      <Tab.Screen name="/settings" component={SettingsScreen} />
+    </Tab.Navigator>;
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <NavigationContainer>
+        <TabNavigator />
+      </NavigationContainer>
     </View>
   );
 }
@@ -13,8 +29,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: colors.light,
+    paddingVertical: 40,
+    paddingHorizontal: 20,
   },
 });
