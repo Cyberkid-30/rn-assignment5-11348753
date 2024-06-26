@@ -10,6 +10,9 @@ From there, i built other components and combined to make the screens. I impleme
 Finally, I tested the app by running npm start  for Android. The app successfully displayed the screens just as the designs given.
 
 ![alt text](<app/screenshots/Screenshot 2024-06-26 213422.png>)
+
 ![alt text](<app/screenshots/Screenshot 2024-06-26 213503.png>)
+
 ![alt text](<app/screenshots/Screenshot 2024-06-26 214033.png>)
+
 ![alt text](<app/screenshots/Screenshot 2024-06-26 214352.png>)
